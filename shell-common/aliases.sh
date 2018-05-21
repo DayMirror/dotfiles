@@ -15,4 +15,4 @@ alias adbkill="adb kill-server"
 alias adbstart="adb start-server"
 
 alias cddev="cd $DEV_PATH"
-alias cdrepos="cd $REPOS"
+alias cdrepos="cd $REPOS_PATH"
