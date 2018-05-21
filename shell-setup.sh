@@ -15,11 +15,11 @@ if [ ! -z "$platform" ]; then
   shell_includes+=("$platform")
 fi
 
-# shell_includes+=('gsn')
+shell_includes+=('gsn')
 shell_includes+=('local')
 
 for shell_include in  "${shell_includes[@]}"
-dogit 
+do
   shell_folder="$shell_directory/.$shell_prefix-$shell_include"
   if [ -d $shell_folder ]; then
     for shell_script in "${shell_scripts[@]}"
