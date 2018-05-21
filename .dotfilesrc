@@ -1,6 +1,7 @@
 [dotfiles]
 repository = ~/dotfiles
 ignore = [
+    '.vscode',
     '.git',
     '.gitignore',
     '.dotfilesrc',
