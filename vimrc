@@ -17,6 +17,11 @@ call plug#begin('~/.vim/bundle')
   Plug 'junegunn/vim-plug'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } 
 	Plug 'morhetz/gruvbox'
+	Plug 'kien/ctrlp.vim'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'tpope/vim-fugitive'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'rking/ag.vim'
 call plug#end()
 
 " Mappings 
