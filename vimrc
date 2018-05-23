@@ -22,11 +22,16 @@ call plug#begin('~/.vim/bundle')
 	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'rking/ag.vim'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-commentary'
+	Plug 'vim-scripts/replacewithregister'
+	Plug 'christoomey/vim-titlecase'
+	Plug 'christoomey/vim-system-copy'
 call plug#end()
 
 " Mappings 
 map <C-n> :NERDTreeToggle<CR>
 
 " Colorscheme
-"colorscheme gruvbox
-"set background=dark
+colorscheme gruvbox
+set background=dark
