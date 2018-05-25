@@ -6,6 +6,10 @@ syntax on
 set hlsearch
 set nohlsearch
 set incsearch
+set number
+set relativenumber
+let g:airline_theme='simple'
+let g:airline_powerline_fonts = 1
 
 " Plugins Manager
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -28,6 +32,8 @@ call plug#begin('~/.vim/bundle')
 	Plug 'vim-scripts/replacewithregister'
 	Plug 'christoomey/vim-titlecase'
 	Plug 'christoomey/vim-system-copy'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Mappings 
