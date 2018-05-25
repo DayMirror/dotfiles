@@ -1,9 +1,10 @@
 " Basic 
 set nocompatible
-set number
+set noswapfile
 set tabstop=2
 syntax on
 set hlsearch
+set nohlsearch
 set incsearch
 
 " Plugins Manager
@@ -30,7 +31,8 @@ call plug#begin('~/.vim/bundle')
 call plug#end()
 
 " Mappings 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Colorscheme
 colorscheme gruvbox
