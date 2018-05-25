@@ -9,7 +9,9 @@ set incsearch
 set number
 set relativenumber
 let g:airline_theme='simple'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let mapleader="\\"
 
 " Plugins Manager
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -37,7 +39,9 @@ call plug#begin('~/.vim/bundle')
 call plug#end()
 
 " Mappings 
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Colorscheme
