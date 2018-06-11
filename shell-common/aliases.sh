@@ -13,6 +13,7 @@ alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 alias adbdevices="adb devices"
 alias adbkill="adb kill-server"
 alias adbstart="adb start-server"
+alias reloadzshrc="source ~/.zshrc"
 
 alias cddev="cd $DEV_PATH"
 alias cdrepos="cd $REPOS_PATH"
