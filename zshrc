@@ -10,6 +10,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions", defer:0 # cool autocompletion while you are typing command
 zplug "zsh-users/zsh-syntax-highlighting", defer:2 # shell realtime syntax highlighter
 zplug "zsh-users/zsh-history-substring-search", defer:3 # fish shell's history search feature
+zplug "jocelynmallon/zshmarks" # tool to jump around directories using bookmarks
 zplug "Tarrasch/zsh-bd" # quickly go back to a specific parent directory with bd command
 zplug "mollifier/cd-gitroot" # quickly cd to git repo root directoty
 zplug "plugins/colored-man-pages", from:oh-my-zsh # adds more colors to man pages
