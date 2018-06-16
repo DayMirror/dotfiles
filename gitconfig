@@ -510,8 +510,8 @@
     panic = !tar cvf ../git_panic.tar *
 
   # Do everything we can to synchronize all changes
-    get = !git pull --rebase && git submodule update --init --recursive
-    put = !git commit --all --message="$1" && git push
+    get = "!git pull --rebase && git submodule update --init --recursive"
+    put = "!git commit --all --message="$1" && git push"
 
   # Ignore all untracked files by appending them to .gitignore:
     ignore = "!git status | grep -P \"^\\t\" | grep -vF .gitignore | sed \"s/^\\t//\" >> .gitignore"
