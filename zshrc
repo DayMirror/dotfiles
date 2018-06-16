@@ -48,6 +48,3 @@ shell_setup=~/.shell-setup.sh
 if [ -e $shell_setup ]; then
   source $shell_setup
 fi
-
-# source iterm2 shell integration script
-source ~/.iterm2_shell_integration.zsh
