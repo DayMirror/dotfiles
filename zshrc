@@ -19,7 +19,7 @@ zplug "djui/alias-tips" # show alias for the typed command
 zplug "zsh-users/zsh-autosuggestions" # cool autocompletion while you are typing command
 zplug "Tarrasch/zsh-bd" # quickly go back to a specific parent directory with bd command
 zplug "mollifier/cd-gitroot" # quickly cd to git repo root directoty
-zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh # adds more colors to man pages
 zplug "jsks/czhttpd" # simple http server in pure zsh with czhttpd command
 zplug "wfxr/forgit", defer:1 # adds few interactive commands for git
 zplug "sindresorhus/pretty-time-zsh" # convert seconds to human readable format with command
