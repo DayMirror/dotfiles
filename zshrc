@@ -1,6 +1,9 @@
 #!/bin/sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZPLUG_HOME=/usr/local/opt/zplug
+if [ ! -d $ZPLUG_HOME ]; then
+	ZPLUG_HOME=$HOME/.zplug
+fi
 
 source $ZPLUG_HOME/init.zsh
 
