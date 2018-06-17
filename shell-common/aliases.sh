@@ -1,4 +1,6 @@
-alias ll="ls -al"
+alias cl="clear"
+alias ls="ls -G"
+alias ll="ls -alG"
 alias gitstatus="git status"
 alias gitresetfile="git checkout --"
 alias githardreset="git reset --hard HEAD"
