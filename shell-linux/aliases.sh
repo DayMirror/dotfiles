@@ -1,0 +1,1 @@
+/home/dudel/dotfiles/shell-linux/aliases.sh
