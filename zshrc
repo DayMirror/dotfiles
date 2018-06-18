@@ -44,8 +44,14 @@ fi
 zplug load
 
 # fix for zplug and zsh-history-substring-search issue that breaks substring history search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+	bindkey '\eOA' history-substring-search-up
+	bindkey '\eOB' history-substring-search-down
+elif [[ "$unamestr" == 'Darwin' ]]; then
+	bindkey '[[A' history-substring-search-up
+	bindkey '[[B' history-substring-search-down
+fi
 
 # sorce my shell scripts
 shell_setup=~/.shell-setup.sh
