@@ -1,1 +1,1 @@
-/home/dudel/dotfiles/shell-linux/aliases.sh
+alias ls="ls --color=auto"

@@ -1,1 +1,0 @@
-/home/dudel/dotfiles/shell-linux/variables.zsh
