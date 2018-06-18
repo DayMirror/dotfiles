@@ -36,13 +36,14 @@ call plug#begin('~/.vim/bundle')
 	Plug 'christoomey/vim-system-copy'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Mappings 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <c-n> :NERDTreeToggle<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <c-I> :PlugInstall<cr>
 
 " Colorscheme
 colorscheme gruvbox
