@@ -1,17 +1,27 @@
-" Basic 
-set nocompatible
-set noswapfile
-set tabstop=2
-syntax on
-set hlsearch
-set nohlsearch
-set incsearch
-set number
-set relativenumber
-let g:airline_theme='simple'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let mapleader="\\"
+" Basic Settings
+	set nocompatible
+
+	set noswapfile " disable swap files usage
+
+	set tabstop=2 " witdh of TAB = 2 spaces
+	set shiftwidth=2 " width of autoindent is 2 spaces
+
+	syntax on " enable syntax highlighting
+
+	set hlsearch " highlight search matches
+	set nohlsearch " auto disable search highlighting after search is finished
+	set incsearch " search while typing
+
+	set number
+	set relativenumber
+	let mapleader="\\"
+	set foldmethod=indent
+
+" Plugins settings
+	" Airline plugin settings
+	let g:airline_theme='simple'
+	let g:airline_powerline_fonts=1
+	let g:airline#extensions#tabline#enabled=1
 
 " Plugins Manager
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -39,12 +49,12 @@ call plug#begin('~/.vim/bundle')
 	Plug 'easymotion/vim-easymotion'
 call plug#end()
 
-" Mappings 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <c-n> :NERDTreeToggle<cr>
-nnoremap <c-I> :PlugInstall<cr>
+" Key Mappings 
+	nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+	nnoremap <leader>sv :source $MYVIMRC<cr>
+	nnoremap <c-n> :NERDTreeToggle<cr>
+	nnoremap <c-I> :PlugInstall<cr>
 
 " Colorscheme
-colorscheme gruvbox
-set background=dark
+	colorscheme gruvbox
+	set background=dark
