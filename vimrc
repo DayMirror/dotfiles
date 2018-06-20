@@ -32,6 +32,20 @@
 	
 	" Vim-Airline plugin settings
 		let g:airline#extensions#tabline#enabled = 1 " display all buffers if one tab is open
+
+	" Ultisnips plugin settings
+		let g:gUltiSnipsExpandTrigger="<c-cr>" " trigger snippet
+		let g:UltiSnipsJumpForwardTrigger="<c-]>"
+		let g:gUltiSnipsJumpBackwardTrigger="<c-[>"
+
+	" Syntastic plugin settings
+		set statusline+=%#warningmsg#
+		set statusline+=%{SyntasticStatuslineFlag()}
+		set statusline+=%*
+		let g:syntastic_always_populate_loc_list = 1
+		let g:syntastic_auto_loc_list = 1
+		let g:syntastic_check_on_open = 1
+		let g:syntastic_check_on_wq = 0
 	
 " Plugins Manager
 	if empty(glob('~/.vim/autoload/plug.vim'))
@@ -41,12 +55,13 @@
 
 " Plugins List
 	call plug#begin('~/.vim/bundle')
-		Plug 'junegunn/vim-plug'
+		Plug 'junegunn/vim-plug' " plugins manager
 		Plug 'tpope/vim-repeat' " enables other plugins to support . command
+		Plug 'shougo/vimproc.vim', { 'do' : 'make' } " interactive command execution, dependency of tsuquyimi
 		Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } 
-		Plug 'morhetz/gruvbox'
-		Plug 'kien/ctrlp.vim'
-		Plug 'jiangmiao/auto-pairs'
+		Plug 'morhetz/gruvbox' " vim color theme
+		Plug 'kien/ctrlp.vim' " fuzzy finder
+		Plug 'jiangmiao/auto-pairs' " automatically adds complementary closing bracket
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
 		Plug 'tpope/vim-surround' " surround text with parentheses, brackets, etc.
@@ -59,6 +74,13 @@
 		Plug 'haya14busa/incsearch.vim' " better incremental search with all matches highlighting
 		Plug 'haya14busa/incsearch-fuzzy.vim' " fuzzy incremental search
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
+		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tooll
+		Plug 'sirver/ultisnips' " powerful snippets engine (requires python)
+		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
+		Plug 'vim-syntastic/syntastic' " powerful syntax checker
+		Plug 'valloric/youcompleteme', { 'do' : './install.py --clang-completer --cs-completer --js-completer' } " powerful autocompletion engine
+		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
+		Plug 'leafgarland/typescript', { 'for' : ['ts', 'js'] } " typescript syntax highlighting and something else
 	call plug#end()
 
 " Key Mappings 
@@ -101,7 +123,7 @@
 		nnoremap <leader>/ <Plug>(incsearch-easymotion-/)
 		nnoremap <leader>? <Plug>(incsearch-easymotion-?)
 		nnoremap <leader>g/ <Plug>(incsearch-easymotion-stay) " search without moving cursor
-
+	
 " Colorscheme
 	colorscheme gruvbox
 	set background=dark
