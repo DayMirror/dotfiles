@@ -75,12 +75,10 @@
 		Plug 'haya14busa/incsearch-fuzzy.vim' " fuzzy incremental search
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tooll
-		Plug 'sirver/ultisnips' " powerful snippets engine (requires python)
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
-		Plug 'valloric/youcompleteme', { 'do' : './install.py --clang-completer --cs-completer --js-completer' } " powerful autocompletion engine
 		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
-		Plug 'leafgarland/typescript', { 'for' : ['ts', 'js'] } " typescript syntax highlighting and something else
+		Plug 'leafgarland/typescript-vim', { 'for' : ['ts', 'js'] } " typescript syntax highlighting and something else
 	call plug#end()
 
 " Key Mappings 
@@ -92,7 +90,7 @@
 		nnoremap <c-n> :NERDTreeToggle<cr> " show/hide NerdTree
 
 	" VimPlug key bindings
-		nnoremap <c-I> :PlugInstall<cr> " install all plugins
+		nnoremap <leader><c-I> :PlugInstall<cr> " install all plugins
 
 	" Vim-TitleCase key bindings
 		nnoremap <leader>gt <Plug>Titlecase

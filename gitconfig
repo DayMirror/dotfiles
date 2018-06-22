@@ -1036,3 +1036,9 @@
   default = matching
 [credential]
 	helper = store
+[difftool "sourcetree"]
+	cmd = "code "
+	path = 
+[mergetool "sourcetree"]
+	cmd = "code "
+	trustExitCode = true
