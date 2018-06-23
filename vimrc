@@ -62,6 +62,7 @@
 		Plug 'tpope/vim-repeat' " allows other plugins to support . command
 		Plug 'shougo/vimproc.vim', { 'do' : 'make' } " interactive command execution, dependency of tsuquyimi
 		Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } 
+		Plug 'tpope/vim-eunuch' " easy access to the most command shell commands (Mkdir, Move, etc)
 		Plug 'morhetz/gruvbox' " vim color theme
 		Plug 'kien/ctrlp.vim' " fuzzy finder
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
@@ -92,10 +93,10 @@
 		nnoremap <leader>sv :source ~/.vimrc<cr>
 	
 	" Jump around windows
-		nnoremap <C-h> <C-w>h
-		nnoremap <C-j> <C-w>j
-		nnoremap <C-k> <C-w>k
-		nnoremap <C-l> <C-w>l
+		nnoremap <c-h> <C-w>h
+		nnoremap <c-j> <C-w>j
+		nnoremap <c-k> <C-w>k
+		nnoremap <c-l> <C-w>l
 
 	" Cycling through buffers
 		nnoremap <c-[> :bprevious<cr>	
