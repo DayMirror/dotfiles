@@ -59,7 +59,7 @@
 " Plugins List
 	call plug#begin('~/.vim/bundle')
 		Plug 'junegunn/vim-plug' " plugins manager
-		Plug 'tpope/vim-repeat' " enables other plugins to support . command
+		Plug 'tpope/vim-repeat' " allows other plugins to support . command
 		Plug 'shougo/vimproc.vim', { 'do' : 'make' } " interactive command execution, dependency of tsuquyimi
 		Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } 
 		Plug 'morhetz/gruvbox' " vim color theme
@@ -67,7 +67,7 @@
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
 		Plug 'tpope/vim-surround' " surround text with parentheses, brackets, etc.
-		Plug 'tpope/vim-commentary' " comment text
+		Plug 'tpope/vim-commentary' " toggle comments with commands gcc and gc<motion>
 		Plug 'christoomey/vim-titlecase' " title case text
 		Plug 'christoomey/vim-system-copy' " paste into system clipboard with cp<motion> command
 		Plug 'vim-airline/vim-airline'
@@ -76,7 +76,8 @@
 		Plug 'haya14busa/incsearch.vim' " better incremental search with all matches highlighting
 		Plug 'haya14busa/incsearch-fuzzy.vim' " fuzzy incremental search
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
-		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tooll
+		Plug '/usr/local/opt/fzf'
+		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
@@ -95,9 +96,9 @@
 		nnoremap <leader><c-I> :PlugInstall<cr>
 
 	" Vim-TitleCase key bindings
-		nnoremap <leader>gt <Plug>Titlecase
-		vnoremap <leader>gt <Plug>Titlecase
-		nnoremap <leader>gT <Plug>TitlecaseLine
+		nmap <leader>gt <Plug>Titlecase
+		vmap <leader>gt <Plug>Titlecase
+		nmap <leader>gT <Plug>TitlecaseLine
 
 	" Incsearch key bindings
 		map / <Plug>(incsearch-forward)
