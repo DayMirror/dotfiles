@@ -107,6 +107,9 @@
 	" VimPlug key bindings
 		nnoremap <leader>PI :PlugInstall<cr>
 		nnoremap <leader>PU :PlugUpdate<cr>
+	
+	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
+		nmap <c-_> gcc
 
 	" Vim-TitleCase key bindings
 		nmap <leader>gt <Plug>Titlecase
