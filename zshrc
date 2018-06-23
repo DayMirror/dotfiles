@@ -49,8 +49,8 @@ if [[ "$unamestr" == 'Linux' ]]; then
 	bindkey '\eOA' history-substring-search-up
 	bindkey '\eOB' history-substring-search-down
 elif [[ "$unamestr" == 'Darwin' ]]; then
-	bindkey '[[A' history-substring-search-up
-	bindkey '[[B' history-substring-search-down
+	bindkey '[A' history-substring-search-up
+	bindkey '[B' history-substring-search-down
 fi
 
 # sorce my shell scripts
