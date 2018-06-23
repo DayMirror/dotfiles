@@ -78,6 +78,8 @@
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
 		Plug '/usr/local/opt/fzf'
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
+		Plug 'jeetsukumaran/vim-buffergator' " list all buffers
+		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
@@ -95,11 +97,16 @@
 		nnoremap <C-k> <C-w>k
 		nnoremap <C-l> <C-w>l
 
+	" Cycling through buffers
+		nnoremap <c-[> :bprevious<cr>	
+		nnoremap <c-]> :bnext<cr>	
+
 	" NerdTree key bindings
 		nnoremap <c-n> :NERDTreeToggle<cr>
 
 	" VimPlug key bindings
-		nnoremap <leader><c-I> :PlugInstall<cr>
+		nnoremap <leader>PI :PlugInstall<cr>
+		nnoremap <leader>PU :PlugUpdate<cr>
 
 	" Vim-TitleCase key bindings
 		nmap <leader>gt <Plug>Titlecase
