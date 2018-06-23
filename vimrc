@@ -88,6 +88,12 @@
 	" Edit and source vimrc
 		nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 		nnoremap <leader>sv :source ~/.vimrc<cr>
+	
+	" Jump around windows
+		nnoremap <C-h> <C-w>h
+		nnoremap <C-j> <C-w>j
+		nnoremap <C-k> <C-w>k
+		nnoremap <C-l> <C-w>l
 
 	" NerdTree key bindings
 		nnoremap <c-n> :NERDTreeToggle<cr>
