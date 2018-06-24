@@ -91,7 +91,7 @@
 
 	" Quickly quit vim
 		noremap <leader>q :wqall!
-		noremap <leader>Q :qall!
+		noremap <leader>!q :qall!
 	
 	" Jump around windows
 		nnoremap <c-h> <C-w>h
