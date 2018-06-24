@@ -89,6 +89,13 @@
 		nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 		nnoremap <leader>sv :source ~/.vimrc<cr>
 
+	" Fix for backspace
+		nnoremap <BS> X
+		set backspace=indent,eol,start
+
+	" Fix for Space button in insert mode
+		" inoremap <C-@> <C-Space>
+
 	" Quickly quit vim
 		noremap <leader>q :wqall!
 		noremap <leader>!q :qall!
@@ -155,6 +162,9 @@
 		let g:UltiSnipsExpandTrigger="<c-w>"
 		let g:UltiSnipsJumpForwardTrigger="<c-j>"
 		let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+	" YouCompleteMe plugin key binding settings
+		" let g:ycm_key_invoke_completion = '<C-Space>'
 	
 " Colorscheme
 	colorscheme gruvbox
