@@ -85,6 +85,7 @@
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
 		Plug 'leafgarland/typescript-vim', { 'for' : ['ts', 'js'] } " typescript syntax highlighting and something else
+		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
 	call plug#end()
 
 " Key Mappings 
