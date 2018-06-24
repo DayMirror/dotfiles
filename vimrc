@@ -44,6 +44,12 @@
 		let g:syntastic_auto_loc_list = 1
 		let g:syntastic_check_on_open = 1
 		let g:syntastic_check_on_wq = 0
+
+	" Typescript-Vim plugin settings
+		let g:typescript_compiler_binary = 'tsc'
+		let g:typescript_compiler_options = ''
+		autocmd QuickFixCmdPost [^l]* nested cwindow
+		autocmd QuickFixCmdPost    l* nested lwindow
 	
 " Plugins Manager
 	if empty(glob('~/.vim/autoload/plug.vim'))
@@ -79,8 +85,9 @@
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
-		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
-		Plug 'leafgarland/typescript-vim', { 'for' : ['ts', 'js'] } " typescript syntax highlighting and something else
+		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
+		Plug 'leafgarland/typescript-vim' " typescript syntax highlighting and something else
+		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
 		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
 	call plug#end()
 
