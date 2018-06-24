@@ -36,11 +36,6 @@
 	" Vim-Airline plugin settings
 		let g:airline#extensions#tabline#enabled = 1 " display all buffers if one tab is open
 
-	" Ultisnips plugin settings
-		let g:gUltiSnipsExpandTrigger="<c-cr>" " trigger snippet
-		let g:UltiSnipsJumpForwardTrigger="<c-]>"
-		let g:gUltiSnipsJumpBackwardTrigger="<c-[>"
-
 	" Syntastic plugin settings
 		set statusline+=%#warningmsg#
 		set statusline+=%{SyntasticStatuslineFlag()}
@@ -81,6 +76,7 @@
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
 		Plug 'jeetsukumaran/vim-buffergator' " list all buffers
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
+		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi', { 'for' : ['ts', 'js'] } " autocompletion and navigation for typescript
@@ -92,6 +88,10 @@
 	" Edit and source vimrc
 		nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 		nnoremap <leader>sv :source ~/.vimrc<cr>
+
+	" Quickly quit vim
+		noremap <leader>q :wqall!
+		noremap <leader>Q :qall!
 	
 	" Jump around windows
 		nnoremap <c-h> <C-w>h
@@ -150,6 +150,11 @@
 		map <leader>/ <Plug>(incsearch-easymotion-/)
 		map <leader>? <Plug>(incsearch-easymotion-?)
 		map <leader>g/ <Plug>(incsearch-easymotion-stay) " search without moving cursor
+
+	" Ultisnips plugin key binding settings
+		let g:UltiSnipsExpandTrigger="<c-w>"
+		let g:UltiSnipsJumpForwardTrigger="<c-j>"
+		let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 	
 " Colorscheme
 	colorscheme gruvbox
