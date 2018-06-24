@@ -86,9 +86,9 @@
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
-		Plug 'leafgarland/typescript-vim' " typescript syntax highlighting and something else
 		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
 		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
+		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
 	call plug#end()
 
 " Key Mappings 
