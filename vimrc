@@ -75,6 +75,7 @@
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
 		Plug 'easymotion/vim-easymotion' " faster navigation
+		Plug 'tmux-plugins/vim-tmux-focus-events' " restores FocusGained and FocusLost events in terminal vim inside tmux
 		Plug 'haya14busa/incsearch.vim' " better incremental search with all matches highlighting
 		Plug 'haya14busa/incsearch-fuzzy.vim' " fuzzy incremental search
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
