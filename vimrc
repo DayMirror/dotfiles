@@ -81,7 +81,6 @@
 		Plug '/usr/local/opt/fzf'
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
 		Plug 'jeetsukumaran/vim-buffergator' " list all buffers
-		Plug 'tpope/vim-obsession' " simplify session management
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
@@ -123,8 +122,8 @@
 
 	" Sessions management
 		let g:session_dir = '~/.vim/sessions'
-		exec 'nnoremap <leader>ss :mks! ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
-		exec 'nnoremap <leader>sr :so ' . g:session_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+		exec 'nnoremap <leader>ss :mks! ' . g:session_dir . '/' . expand('%:p:h:t') . '.vim'
+		exec 'nnoremap <leader>rs :so ' . g:session_dir . '/' . expand('%:p:h:t') . '.vim'
 
 	" NerdTree key bindings
 		nnoremap <c-n> :NERDTreeToggle<cr>
