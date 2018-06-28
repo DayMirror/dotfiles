@@ -96,6 +96,9 @@
 	" Edit and source vimrc
 		nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 		nnoremap <leader>sv :source ~/.vimrc<cr>
+	
+	" Disable highlighting
+		nnoremap <leader>n :noh<cr>
 
 	" Fix for backspace
 		nnoremap <BS> X
