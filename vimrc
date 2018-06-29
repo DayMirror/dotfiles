@@ -66,6 +66,7 @@
 		Plug 'tpope/vim-eunuch' " easy access to the most command shell commands (Mkdir, Move, etc)
 		Plug 'morhetz/gruvbox' " vim color theme
 		Plug 'kien/ctrlp.vim' " fuzzy finder
+		Plug 'mileszs/ack.vim' " wrapper for code searching tool (ack or ag)
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
 		Plug 'tpope/vim-surround' " surround text with parentheses, brackets, etc.
@@ -75,7 +76,7 @@
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
 		Plug 'easymotion/vim-easymotion' " faster navigation
-		Plug 'tmux-plugins/vim-tmux-focus-events' " restores FocusGained and FocusLost events in terminal vim inside tmux
+		"Plug 'tmux-plugins/vim-tmux-focus-events' " restores FocusGained and FocusLost events in terminal vim inside tmux
 		Plug 'haya14busa/incsearch.vim' " better incremental search with all matches highlighting
 		Plug 'haya14busa/incsearch-fuzzy.vim' " fuzzy incremental search
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
@@ -132,6 +133,7 @@
 	" VimPlug key bindings
 		nnoremap <leader>PI :PlugInstall<cr>
 		nnoremap <leader>PU :PlugUpdate<cr>
+		nnoremap <leader>PC :PlugClean<cr>
 	
 	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
 		nmap <c-_> gcc
