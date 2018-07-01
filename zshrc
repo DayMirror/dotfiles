@@ -31,7 +31,14 @@ zplug "plugins/mvn", from:oh-my-zsh # autocompletion for maven
 zplug "plugins/docker", from:oh-my-zsh # autocompletion for docker
 zplug "plugins/docker-compose", from:oh-my-zsh # autocompletion for docker-compose
 zplug "plugins/docker-machine", from:oh-my-zsh # autocompletion for docker-machine
+zplug "plugins/kubectl", from:oh-my-zsh # autocompletion for kubernetes
 zplug "plugins/adb", from:oh-my-zsh # autocompletion for adb
+zplug "plugins/iterm2", from:oh-my-zsh
+zplug "pluging/man", from:oh-my-zsh
+zplug "plugins/mosh", from:oh-my-zsh # autocompoletion for mosh
+zplug "plugins/exract", from:oh-my-zsh # 'extract' commmand convenient for extracting archives of various types
+zplug "plugins/cargo", from:oh-my-zsh # autocompletion for cargo (rust package manager)
+zplug "plugins/gem", from:oh-my-zsh # autocompletion for gem (ruby package panager)
 zplug "plugins/web-search", from:oh-my-zsh # adds commends to do web search (google, bing, ddg)
 zplug "wesbos/Cobalt2-iterm", as:theme
 
