@@ -28,6 +28,10 @@ zplug "plugins/git-extras", from:oh-my-zsh # autocompletion for git-extras comma
 zplug "plugins/npm", from:oh-my-zsh # autocompletion for npm
 zplug "plugins/pod", from:oh-my-zsh # autocompletion for cocoapods
 zplug "plugins/mvn", from:oh-my-zsh # autocompletion for maven
+zplug "plugins/docker", from:oh-my-zsh # autocompletion for docker
+zplug "plugins/docker-compose", from:oh-my-zsh # autocompletion for docker-compose
+zplug "plugins/docker-machine", from:oh-my-zsh # autocompletion for docker-machine
+zplug "plugins/adb", from:oh-my-zsh # autocompletion for adb
 zplug "plugins/web-search", from:oh-my-zsh # adds commends to do web search (google, bing, ddg)
 zplug "wesbos/Cobalt2-iterm", as:theme
 
