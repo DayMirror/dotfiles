@@ -162,6 +162,9 @@
 		map z? <Plug>(incsearch-fuzzy-?)
 		map zg/ <Plug>(incsearch-fuzzy-stay) 
 
+	" Ack.vim key bindings
+		noremap <c-f> :Ack! --smart-case -C 0<space>
+
 	" Easy Motion key bindings
 		map <Leader> <Plug>(easymotion-prefix)
 		map <leader>f <Plug>(easymotion-bd-f2)
