@@ -1,4 +1,4 @@
-" Basic Settings
+s Basic Settings
 	set nocompatible
 
 	set noswapfile " disable swap files usage
@@ -111,8 +111,8 @@
 		" inoremap <C-@> <C-Space>
 
 	" Quickly quit vim
-		noremap <leader>q :wqall!
-		noremap <leader>!q :qall!
+		noremap <leader>q :qall!
+		noremap <leader>wq :wqall!
 	
 	" Jump around windows
 		nnoremap <c-h> <C-w>h
@@ -134,8 +134,8 @@
 
 	" VimPlug key bindings
 		nnoremap <leader>PI :PlugInstall<cr>
-		nnoremap <leader>PU :PlugUpdate<cr>
-		nnoremap <leader>PC :PlugClean<cr>
+		snoremap <leader>PU :PlugUpdate<cr>
+		snoremap <leader>PC :PlugClean<cr>
 	
 	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
 		nmap <c-_> gcc
