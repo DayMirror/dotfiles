@@ -124,6 +124,12 @@
 		nnoremap <c-k> <C-w>k
 		nnoremap <c-l> <C-w>l
 
+	" Resizing split window
+		nnoremap <leader>+ <c-w>5+
+		nnoremap <leader>- <c-w>5-
+		nnoremap <leader>> <c-w>5>
+		nnoremap <leader>< <c-w>5<
+
 	" Cycling through buffers
 		nnoremap <c-[> :bprevious<cr>	
 		nnoremap <c-]> :bnext<cr>	
