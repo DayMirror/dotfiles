@@ -1,4 +1,4 @@
-s Basic Settings
+" Basic Settings
 	set nocompatible
 
 	set noswapfile " disable swap files usage
