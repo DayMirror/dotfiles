@@ -103,6 +103,10 @@
 	" Disable highlighting
 		nnoremap <leader>n :noh<cr>
 
+	" Reloading file
+		nnoremap <leader>r :e<cr>
+		nnoremap <leader>R :e!<cr>
+	
 	" Fix for backspace
 		nnoremap <BS> X
 		set backspace=indent,eol,start
