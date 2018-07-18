@@ -2,7 +2,7 @@
 shell_directory=$(cd `dirname $0` && pwd)
 shell_prefix='shell'
 shell_scripts=('variables' 'aliases' 'functions' 'autocompletions' 'config')
-shell_includes=('common')
+shell_includes=('common' 'local')
 
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
