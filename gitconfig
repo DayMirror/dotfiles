@@ -1,5 +1,5 @@
 [user]
-	email = valder1989@gmail.com
+	email = dimaev@gsngames.com
 	name = Damir Imaev
 
 [alias]
@@ -1042,3 +1042,7 @@
 [mergetool "sourcetree"]
 	cmd = "code "
 	trustExitCode = true
+[core]
+	excludesfile = /Users/dimaev/.gitignore_global
+[commit]
+	template = /Users/dimaev/.stCommitMsg
