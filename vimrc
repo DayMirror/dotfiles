@@ -117,6 +117,9 @@
 	" Quickly quit vim
 		noremap <leader>q :qall!
 		noremap <leader>wq :wqall!
+
+	" Quicly close buffers
+		nnoremap <leader>c :Bdelete<cr>
 	
 	" Jump around windows
 		nnoremap <c-h> <C-w>h
