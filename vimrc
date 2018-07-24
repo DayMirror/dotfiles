@@ -67,7 +67,7 @@
 		Plug 'morhetz/gruvbox' " vim color theme
 		Plug 'kien/ctrlp.vim' " fuzzy finder
 		Plug 'mileszs/ack.vim' " wrapper for code searching tool (ack or ag)
-		Plug 'wincent/scalpael' "shortcut for replacing a work in a file or selection
+		Plug 'wincent/scalpel' "shortcut for replacing a work in a file or selection
 		Plug 'wincent/loupe' " enhanced in-file search
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
