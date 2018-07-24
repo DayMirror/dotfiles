@@ -120,6 +120,7 @@
 
 	" Quicly close buffers
 		nnoremap <leader>c :Bdelete<cr>
+		nnoremap <leader>ac :bufdo :Bdelete<cr>
 	
 	" Jump around windows
 		nnoremap <c-h> <C-w>h
