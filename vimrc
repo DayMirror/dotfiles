@@ -139,6 +139,11 @@
 		nnoremap <c-[> :bprevious<cr>	
 		nnoremap <c-]> :bnext<cr>	
 
+	" Show/Hide all hidden symbols
+		" set listchars=tab:▒░,trail:▓
+		nnoremap <leader>ts :set list<cr>
+		nnoremap <leader>th :set nolist<cr>
+
 	" Sessions management
 		let g:session_dir = '~/.vim/sessions'
 		exec 'nnoremap <leader>ss :mks! ' . g:session_dir . '/' . expand('%:p:h:t') . '.vim'
