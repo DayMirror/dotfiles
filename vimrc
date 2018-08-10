@@ -1,4 +1,4 @@
-" Basic Settings
+
 	set nocompatible
 
 	set noswapfile " disable swap files usage
@@ -66,15 +66,15 @@
 		Plug 'tpope/vim-eunuch' " easy access to the most command shell commands (Mkdir, Move, etc)
 		Plug 'morhetz/gruvbox' " vim color theme
 		Plug 'kien/ctrlp.vim' " fuzzy finder
-		Plug 'mileszs/ack.vim' " wrapper for code searching tool (ack or ag)
-		Plug 'wincent/scalpel' "shortcut for replacing a work in a file or selection
-		Plug 'wincent/loupe' " enhanced in-file search
+		Plug 'mileszs/ack.vim' " wrapper for code searching tool (ack or ag) '<c>-f'
+		Plug 'wincent/scalpel' "shortcut for replacing a word in a file or selection '<leader>e'
+		Plug 'wincent/loupe' " enhanced in-file search (commands like * #)
 		Plug 'moll/vim-bbye' " better closing buffers (files)
 		Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
 		Plug 'tpope/vim-surround' " surround text with parentheses, brackets, etc.
 		Plug 'tpope/vim-commentary' " toggle comments with commands gcc and gc<motion>
-		Plug 'christoomey/vim-titlecase' " title case text
+		Plug 'christoomey/vim-titlecase' " title case text with command 'gt<motion>
 		Plug 'christoomey/vim-system-copy' " paste into system clipboard with cp<motion> command
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
@@ -85,7 +85,7 @@
 		Plug 'haya14busa/incsearch-easymotion.vim' " easymotion and incsearch integration
 		Plug '/usr/local/opt/fzf'
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
-		Plug 'jeetsukumaran/vim-buffergator' " list all buffers
+		Plug 'jeetsukumaran/vim-buffergator' " list all buffers '<leader>b'
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
