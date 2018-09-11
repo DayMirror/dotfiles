@@ -1,4 +1,4 @@
-alias cl="clear"
+alias c="clear"
 alias ls="ls -G"
 alias ll="ls -alG"
 alias gitstatus="git status"
