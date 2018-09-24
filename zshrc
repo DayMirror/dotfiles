@@ -70,5 +70,3 @@ if [ -e $shell_setup ]; then
   source $shell_setup
 fi
 
-export NVM_DIR="/home/dudel/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
