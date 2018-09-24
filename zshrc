@@ -40,6 +40,7 @@ zplug "plugins/exract", from:oh-my-zsh # 'extract' commmand convenient for extra
 zplug "plugins/cargo", from:oh-my-zsh # autocompletion for cargo (rust package manager)
 zplug "plugins/gem", from:oh-my-zsh # autocompletion for gem (ruby package panager)
 zplug "plugins/web-search", from:oh-my-zsh # adds commends to do web search (google, bing, ddg)
+zplug "lukechilds/zsh-nvm" # manager and additional functionality for nvm (node version manager)
 zplug "wesbos/Cobalt2-iterm", as:theme
 
 # manage zplug itself as a plugins
