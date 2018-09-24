@@ -10,5 +10,6 @@
     "window.zoomLevel": 0,
     "editor.tabSize": 2,
     "terminal.integrated.fontFamily": "Inconsolata for Powerline",
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "all"
 }
