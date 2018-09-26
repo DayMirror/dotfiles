@@ -89,6 +89,8 @@
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
+		Plug 'jceb/emmet.snippets' " emmet snippets for ultisnips
+		Plug 'mattn/emmet-vim' " independent from ultisnips emmmet functionality
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
