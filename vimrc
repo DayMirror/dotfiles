@@ -87,6 +87,7 @@
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
 		Plug 'jeetsukumaran/vim-buffergator' " list all buffers '<leader>b'
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
+		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'jceb/emmet.snippets' " emmet snippets for ultisnips
@@ -94,8 +95,8 @@
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
-		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
+		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
 	call plug#end()
 
 " Key Mappings 
@@ -203,14 +204,18 @@
 		map <leader>? <Plug>(incsearch-easymotion-?)
 		map <leader>g/ <Plug>(incsearch-easymotion-stay) " search without moving cursor
 
+	" YouCompleteMe plugin key binding settings
+		let g:ycm_key_list_select_completion=['<c-n>', '<down>']
+		let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
+
+	" SuperTab settings
+		let g:SuperTabDefaultCompletionType='<c-n>'
+	
 	" Ultisnips plugin key binding settings
-		let g:UltiSnipsExpandTrigger="<c-w>"
+		let g:UltiSnipsExpandTrigger="<tab>"
 		let g:UltiSnipsJumpForwardTrigger="<c-j>"
 		let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-	" YouCompleteMe plugin key binding settings
-		" let g:ycm_key_invoke_completion = '<C-Space>'
-	
 " Colorscheme
 	colorscheme gruvbox
 	set background=dark
