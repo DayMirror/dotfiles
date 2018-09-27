@@ -165,9 +165,9 @@
 		nmap <c-_> gcc
 
 	" Vim-TitleCase key bindings
-		nmap <leader>gt <Plug>Titlecase
-		vmap <leader>gt <Plug>Titlecase
-		nmap <leader>gT <Plug>TitlecaseLine
+		nmap <leader>Gt <Plug>Titlecase
+		vmap <leader>Gt <Plug>Titlecase
+		nmap <leader>GT <Plug>TitlecaseLine
 
 	" Incsearch key bindings
 		map / <Plug>(incsearch-forward)
@@ -216,6 +216,17 @@
 		let g:UltiSnipsExpandTrigger="<tab>"
 		let g:UltiSnipsJumpForwardTrigger="<c-j>"
 		let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+	" YouCompleteMe GoTo Mappings
+		nnoremap <leader>gd :YcmCompleter GoTo<cr>
+		nnoremap <leader>gr :YcmCompleter GoToReferences<cr>
+		nnoremap <leader>gt :YcmCompleter GoToType<cr>
+		nnoremap <leader>gi :YcmCompleter GoToImplementation<cr>
+		nnoremap <leader>gD :YcmCompleter GetDoc<cr>
+		nnoremap <leader>gf :YcmCompleter FixIt<cr>
+		nnoremap <leader>gF :YcmCompleter Format<cr>
+		nnoremap <leader>goi :YcmCompleter OrganizeImports<cr>
+		nnoremap <leader>gr :YcmCompleter RefactorRename 
 
 " Colorscheme
 	colorscheme gruvbox
