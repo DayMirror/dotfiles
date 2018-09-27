@@ -92,7 +92,7 @@
 		Plug 'mattn/emmet-vim' " independent from ultisnips emmmet functionality
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
-		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
+		Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
 		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --cs-completer' } " powerful autocomplete engine
 		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
@@ -210,7 +210,7 @@
 		let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
 
 	" SuperTab settings
-		" let g:SuperTabDefaultCompletionType='<c-n>'
+		let g:SuperTabDefaultCompletionType='<c-n>'
 	
 	" Ultisnips plugin key binding settings
 		let g:UltiSnipsExpandTrigger="<tab>"
