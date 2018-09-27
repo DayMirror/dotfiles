@@ -88,16 +88,16 @@
 		Plug 'junegunn/fzf.vim' " integrates vim with fzf cli tool, can do more than CtrlP (ex. :Lines, :Commits)
 		Plug 'jeetsukumaran/vim-buffergator' " list all buffers '<leader>b'
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
-		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
-		Plug 'SirVer/ultisnips' " snippents engine
-		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 		Plug 'jceb/emmet.snippets' " emmet snippets for ultisnips
 		Plug 'mattn/emmet-vim' " independent from ultisnips emmmet functionality
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		Plug 'Quramy/vim-js-pretty-template' " js tamplate string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
-		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer -cs-completer --js-completer' } " powerful autocomplete engine
+		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --cs-completer' } " powerful autocomplete engine
+		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
+		Plug 'SirVer/ultisnips' " snippents engine
+		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
 	call plug#end()
 
 " Key Mappings 
@@ -158,8 +158,8 @@
 
 	" VimPlug key bindings
 		nnoremap <leader>PI :PlugInstall<cr>
-		snoremap <leader>PU :PlugUpdate<cr>
-		snoremap <leader>PC :PlugClean<cr>
+		nnoremap <leader>PU :PlugUpdate<cr>
+		nnoremap <leader>PC :PlugClean<cr>
 	
 	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
 		nmap <c-_> gcc
@@ -210,7 +210,7 @@
 		let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
 
 	" SuperTab settings
-		let g:SuperTabDefaultCompletionType='<c-n>'
+		" let g:SuperTabDefaultCompletionType='<c-n>'
 	
 	" Ultisnips plugin key binding settings
 		let g:UltiSnipsExpandTrigger="<tab>"
