@@ -20,6 +20,7 @@
 
 	set autoindent " keep indent level when moving to the next line
 	set foldmethod=indent
+	set foldlevel=99 " all unfolded by default
 
 " Plugins settings
 	" Airline plugin settings
@@ -215,6 +216,7 @@
 		let g:UltiSnipsExpandTrigger="<tab>"
 		let g:UltiSnipsJumpForwardTrigger="<c-j>"
 		let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+		let g:UltiSnipsListSnippets="<tab>"
 
 " Colorscheme
 	colorscheme gruvbox
