@@ -1,4 +1,7 @@
 
+	scriptencoding utf-8
+	set encoding=utf-8
+
 	set nocompatible
 
 	set noswapfile " disable swap files usage
@@ -140,11 +143,11 @@
 		nnoremap <leader>< <c-w>5<
 
 	" Cycling through buffers
-		nnoremap <c-[> :bprevious<cr>	
+		nnoremap <c-[> :bprevious<cr>
 		nnoremap <c-]> :bnext<cr>	
 
 	" Show/Hide all hidden symbols
-		set listchars=eol:¶,tab:▒░,trail:▓
+		set listchars=eol:¶,tab:⇛\ ,trail:▩
 		nnoremap <leader>ts :set list<cr>
 		nnoremap <leader>th :set nolist<cr>
 
