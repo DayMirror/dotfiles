@@ -144,10 +144,10 @@
 
 	" Cycling through buffers
 		nnoremap <c-[> :bprevious<cr>
-		nnoremap <c-]> :bnext<cr>	
+		nnoremap <c-]> :bnext<cr>
 
 	" Show/Hide all hidden symbols
-		set listchars=eol:¶,tab:⇛\ ,trail:▩
+		set listchars=eol:↩,tab:⇛\ ,trail:▩
 		nnoremap <leader>ts :set list<cr>
 		nnoremap <leader>th :set nolist<cr>
 
