@@ -14,3 +14,8 @@ gitpushall()
 {
 	git add -A && git commit -m $1 && git push origin HEAD
 }
+
+getabspath()
+{
+	echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+}
