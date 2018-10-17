@@ -1,4 +1,4 @@
-
+" Base settings
 	scriptencoding utf-8
 	set encoding=utf-8
 
@@ -126,7 +126,10 @@
 		noremap <leader>q :qall!
 		noremap <leader>wq :wqall!
 
-	" Quicly close buffers
+	" Quickly fix indentation of the file
+		nnoremap <leader>tf mzgg=G`z
+
+	" Quickly close buffers
 		nnoremap <leader>c :Bdelete<cr>
 		nnoremap <leader>ac :bufdo :Bdelete<cr>
 	
@@ -187,7 +190,7 @@
 	" Fuzzy incsearch key bindings
 		map z/ <Plug>(incsearch-fuzzy-/)
 		map z? <Plug>(incsearch-fuzzy-?)
-		map zg/ <Plug>(incsearch-fuzzy-stay) 
+		map zg/ <Plug>(incsearch-fuzzy-stay)
 
 	" Ack.vim key bindings
 		noremap <c-f> :Ack! --smart-case -C 0<space>
