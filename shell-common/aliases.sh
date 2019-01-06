@@ -16,6 +16,7 @@ alias adbdevices="adb devices"
 alias adbkill="adb kill-server"
 alias adbstart="adb start-server"
 alias reloadzshrc="source ~/.zshrc"
+alias gradlew="./gradlew"
 
 alias cddev="cd $DEV_PATH"
 alias cdrepos="cd $REPOS_PATH"
