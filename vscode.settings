@@ -11,5 +11,7 @@
     "editor.tabSize": 2,
     "terminal.integrated.fontFamily": "Inconsolata for Powerline",
     "editor.insertSpaces": false,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "editor.lineNumbers": "relative",
+    "workbench.activityBar.visible": false
 }
