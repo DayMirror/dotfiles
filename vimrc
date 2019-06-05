@@ -101,6 +101,7 @@
 		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
+		Plug 'junegunn/rainbow_parentheses.vim' " ranbow parenthesis visualiser
 	call plug#end()
 
 " Key Mappings 
@@ -237,3 +238,6 @@
 " Colorscheme
 	colorscheme gruvbox
 	set background=dark
+
+	" Activate rainbow parentheses plugin
+	autocmd VimEnter * RainbowParentheses
