@@ -104,6 +104,12 @@
 		Plug 'junegunn/rainbow_parentheses.vim' " ranbow parenthesis visualiser
 	call plug#end()
 
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+	\  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+	\|   PlugInstall --sync | q
+	\| endif
+
 " Key Mappings 
 	" Edit and source vimrc
 		nnoremap <leader>ev :vsplit ~/.vimrc<cr>
