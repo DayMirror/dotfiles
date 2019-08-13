@@ -169,6 +169,9 @@ autocmd VimEnter *
 	" NerdTree key bindings
 		nnoremap <c-n> :NERDTreeToggle<cr>
 
+	" Ignore meta files in nerd tree
+		let NERDTreeIgnore = ['\.meta$']
+
 	" VimPlug key bindings
 		nnoremap <leader>PI :PlugInstall<cr>
 		nnoremap <leader>PU :PlugUpdate<cr>
