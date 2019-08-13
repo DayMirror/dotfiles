@@ -4,6 +4,7 @@
         "**/.git": true,
         "**/.hg": true,
         "**/.svn": true,
+        "**/*.meta": true,
         "**/CVS": true
     },
     "window.zoomLevel": 0,
@@ -13,5 +14,6 @@
     "editor.renderWhitespace": "all",
     "editor.lineNumbers": "relative",
     "workbench.activityBar.visible": false,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.sideBar.location": "left"
 }
