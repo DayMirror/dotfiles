@@ -1,6 +1,7 @@
 #!/bin/sh
 export SHELL=`which zsh`
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZPLUG_HOME=$HOME/.zplug
 # export ZPLUG_HOME=/usr/local/opt/zplug
 # if [ ! -d $ZPLUG_HOME ]; then
 # 	ZPLUG_HOME=$HOME/.zplug
