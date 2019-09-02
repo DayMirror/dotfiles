@@ -18,6 +18,6 @@ alias adbstart="adb start-server"
 alias reloadzshrc="source ~/.zshrc"
 alias gradlew="./gradlew"
 alias cdhome="cd ~"
-
 alias cddev="cd $DEV_PATH"
 alias cdrepos="cd $REPOS_PATH"
+alias java_home="/usr/libexec/java_home"
