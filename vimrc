@@ -94,6 +94,7 @@
 		Plug 'jceb/emmet.snippets' " emmet snippets for ultisnips
 		Plug 'mattn/emmet-vim' " independent from ultisnips emmmet functionality
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
+		Plug 'rust-lang/rust.vim' " rust syntax checker for syntastic
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
@@ -176,6 +177,9 @@ autocmd VimEnter *
 		nnoremap <leader>PI :PlugInstall<cr>
 		nnoremap <leader>PU :PlugUpdate<cr>
 		nnoremap <leader>PC :PlugClean<cr>
+
+	" Syntastic key bindings
+		nnoremap <leader>ST :SyntasticToggleMode<cr>
 	
 	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
 		nmap <c-_> gcc
