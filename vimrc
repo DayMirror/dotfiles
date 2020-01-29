@@ -97,7 +97,7 @@
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
-		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --cs-completer' } " powerful autocomplete engine
+		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --cs-completer --java-completer --rust-completer' } " powerful autocomplete engine
 		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
 		Plug 'SirVer/ultisnips' " snippents engine
 		Plug 'honza/vim-snippets' " a pack of common snippets for ultisnips
