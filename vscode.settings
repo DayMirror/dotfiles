@@ -1,22 +1,58 @@
 {
-    "files.exclude": {
-			"**/.DS_Store": true,
-			"**/.git": true,
-			"**/.hg": true,
-			"**/.svn": true,
-			"**/CVS": true
-		},
-    "window.zoomLevel": 0,
-    "editor.tabSize": 2,
-    "terminal.integrated.fontFamily": "InconsolataGo Nerd Font",
-    "editor.insertSpaces": false,
-    "editor.renderWhitespace": "all",
-    "editor.lineNumbers": "relative",
-    "workbench.activityBar.visible": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.sideBar.location": "left",
-		"editor.detectIndentation": false,
-		"[json]": {
-			"editor.defaultFormatter": "vscode.json-language-features"
-		}
+	"files.exclude": {
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.svn": true,
+		"**/CVS": true
+	},
+	"window.zoomLevel": 0,
+	"editor.tabSize": 2,
+	"terminal.integrated.fontFamily": "InconsolataGo Nerd Font",
+	"editor.insertSpaces": false,
+	"editor.renderWhitespace": "all",
+	"editor.lineNumbers": "relative",
+	"workbench.activityBar.visible": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.sideBar.location": "left",
+	"editor.detectIndentation": false,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"todo-tree.tree.showScanModeButton": false,
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+	"typescript.format.insertSpaceAfterTypeAssertion": true,
+	"typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+	"typescript.format.semicolons": "insert",
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+	"javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+	"javascript.format.semicolons": "insert",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.autoClosingTags": false,
+	"typescript.locale": "en",
+	"auto-close-tag.activationOnLanguage": [
+		"xml",
+		"php",
+		"blade",
+		"ejs",
+		"jinja",
+		"plaintext",
+		"markdown",
+		"vue",
+		"liquid",
+		"erb",
+		"lang-cfml",
+		"cfml",
+		"HTML (EEx)",
+		"HTML (Eex)",
+		"plist"
+	],
+	"csharpfixformat.style.spaces.beforeIndexerBracket": false,
+	"[csharp]": {
+		"editor.defaultFormatter": "ms-dotnettools.csharp"
+	}
 }
