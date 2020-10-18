@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #!/bin/sh
 export SHELL=`which zsh`
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -43,10 +50,11 @@ zplug "plugins/gem", from:oh-my-zsh # autocompletion for gem (ruby package panag
 zplug "plugins/web-search", from:oh-my-zsh # adds commends to do web search (google, bing, ddg)
 zplug "plugins/ansible", from:oh-my-zsh # ansible commands aliases
 zplug "lukechilds/zsh-nvm" # manager and additional functionality for nvm (node version manager)
-zplug "wesbos/Cobalt2-iterm", as:theme
+# zplug "wesbos/Cobalt2-iterm", as:theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1 # fast theme
 
 # manage zplug itself as a plugins
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
 # zplug check returns true if all packages are installed
 # Therefore, when it returns false, run zplug install
@@ -88,3 +96,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
