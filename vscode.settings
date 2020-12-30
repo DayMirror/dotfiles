@@ -12,7 +12,7 @@
 	"editor.insertSpaces": false,
 	"editor.renderWhitespace": "all",
 	"editor.lineNumbers": "relative",
-	"workbench.activityBar.visible": false,
+	"workbench.activityBar.visible": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"workbench.sideBar.location": "left",
 	"editor.detectIndentation": false,
@@ -54,5 +54,10 @@
 	"csharpfixformat.style.spaces.beforeIndexerBracket": false,
 	"[csharp]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
-	}
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"workbench.editor.showTabs": false,
+	"editor.renderControlCharacters": true
 }
