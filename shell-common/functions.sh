@@ -31,3 +31,15 @@ renamextension()
 	fi
 	find "$dir" -depth -type f -name "*.$source_extension" -exec echo 'Renaming ' {} \; -execdir rename "s/\.$source_extension$/\.$target_extension/" {} \;
 }
+
+freeport()
+{
+	local port="$1"
+	local pid=`lsof -i :$port | grep LISTEN | awk '{ print $2 }'`
+	if [ -n "$pid" ]; then
+		echo "Killing process with PID=$pid"
+		kill $pid
+	else
+		echo "Port $port is free"
+	fi
+}
