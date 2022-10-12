@@ -83,5 +83,36 @@
 			"sha256": "9def783bee81a43fd21de03d5f28bf1e19a51813144298f91c55ec969b1b2a10",
 			"allowed": true
 		}
-	]
+	],
+	"bracket-pair-colorizer-2.depreciation-notice": false,
+	"yaml.customTags": [
+		"!And",
+		"!And sequence",
+		"!If",
+		"!If sequence",
+		"!Not",
+		"!Not sequence",
+		"!Equals",
+		"!Equals sequence",
+		"!Or",
+		"!Or sequence",
+		"!FindInMap",
+		"!FindInMap sequence",
+		"!Base64",
+		"!Join",
+		"!Join sequence",
+		"!Cidr",
+		"!Ref",
+		"!Sub",
+		"!Sub sequence",
+		"!GetAtt",
+		"!GetAZs",
+		"!ImportValue",
+		"!ImportValue sequence",
+		"!Select",
+		"!Select sequence",
+		"!Split",
+		"!Split sequence"
+	],
+	"yaml.validate": false
 }

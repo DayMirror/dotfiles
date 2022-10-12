@@ -49,7 +49,7 @@ zplug "plugins/cargo", from:oh-my-zsh # autocompletion for cargo (rust package m
 zplug "plugins/gem", from:oh-my-zsh # autocompletion for gem (ruby package panager)
 zplug "plugins/web-search", from:oh-my-zsh # adds commends to do web search (google, bing, ddg)
 zplug "plugins/ansible", from:oh-my-zsh # ansible commands aliases
-zplug "lukechilds/zsh-nvm" # manager and additional functionality for nvm (node version manager)
+#zplug "lukechilds/zsh-nvm" # manager and additional functionality for nvm (node version manager)
 # zplug "wesbos/Cobalt2-iterm", as:theme
 zplug "romkatv/powerlevel10k", as:theme, depth:1 # fast theme
 
@@ -113,3 +113,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

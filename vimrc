@@ -74,7 +74,7 @@
 		Plug 'wincent/scalpel' "shortcut for replacing a word in a file or selection '<leader>e'
 		Plug 'wincent/loupe' " enhanced in-file search (commands like * #)
 		Plug 'moll/vim-bbye' " better closing buffers (files)
-		Plug 'tpope/vim-fugitive' " access git commands via vim commands
+		"Plug 'tpope/vim-fugitive' " access git commands via vim commands
 		Plug 'airblade/vim-gitgutter' " show git diff in the left gutter and jump around these changes with ]c [c
 		Plug 'tpope/vim-surround' " surround text with parentheses, brackets, etc.
 		Plug 'tpope/vim-commentary' " toggle comments with commands gcc and gc<motion>
@@ -96,7 +96,7 @@
 		Plug 'vim-syntastic/syntastic' " powerful syntax checker
 		Plug 'rust-lang/rust.vim' " rust syntax checker for syntastic
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
-		Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
+		"Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
 		Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --rust-completer' } " powerful autocomplete engine
 		Plug 'ervandew/supertab' " allows usage of <tab> for all insert completion
