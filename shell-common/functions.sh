@@ -68,5 +68,5 @@ kpodshell()
 		echo "Usage kshell <pod_name>"
 		return 1
 	fi
-	kubectl exec --stdin --tty "$pod" -- /bin/bash
+	kubectl exec --stdin --tty "$pod" -- /bin/sh
 }
