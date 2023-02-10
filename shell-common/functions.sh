@@ -51,7 +51,7 @@ redisinsight()
 	kubectl --namespace infrastructure port-forward $POD_NAME 8001:8001
 }
 
-kdebug()
+knodeshell()
 {
 	local node="$1"
 	if [ -z $node ]; then
@@ -59,4 +59,14 @@ kdebug()
 		return 1
 	fi
 	kubectl debug node/$1 --image=docker.io/library/alpine:latest -it
+}
+
+kpodshell()
+{
+	local pod="$1"
+	if [ -z $pod ]; then
+		echo "Usage kshell <pod_name>"
+		return 1
+	fi
+	kubectl exec --stdin --tty "$pod" -- /bin/bash
 }
