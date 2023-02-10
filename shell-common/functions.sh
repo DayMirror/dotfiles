@@ -50,3 +50,13 @@ redisinsight()
 	echo "Visit http://127.0.0.1:8001 to use your application"
 	kubectl --namespace infrastructure port-forward $POD_NAME 8001:8001
 }
+
+kdebug()
+{
+	local node="$1"
+	if [ -z $node ]; then
+		echo "Usage kdebug <node_id>"
+		return 1
+	fi
+	kubectl debug node/$1 --image=docker.io/library/alpine:latest -it
+}
