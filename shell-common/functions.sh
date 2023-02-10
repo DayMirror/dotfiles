@@ -43,3 +43,10 @@ freeport()
 		echo "Port $port is free"
 	fi
 }
+
+redisinsight()
+{
+	export POD_NAME=$(kubectl get pods --namespace infrastructure -l "app=redisinsight" -o jsonpath="{.items[0].metadata.name}")
+	echo "Visit http://127.0.0.1:8001 to use your application"
+	kubectl --namespace infrastructure port-forward $POD_NAME 8001:8001
+}

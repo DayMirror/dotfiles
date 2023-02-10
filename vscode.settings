@@ -114,5 +114,6 @@
 		"!Split",
 		"!Split sequence"
 	],
-	"yaml.validate": false
+	"yaml.validate": false,
+	"java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home"
 }

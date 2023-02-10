@@ -3,7 +3,7 @@
 	name = Damir Imaev
 
 [core]
-	editor = code --wait
+	editor = vim
 
 [merge]
 	tool = vscode
