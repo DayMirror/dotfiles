@@ -15,7 +15,6 @@ if [ ! -z "$platform" ]; then
   shell_includes+=("$platform")
 fi
 
-shell_includes+=('gsn')
 shell_includes+=('local')
 
 shell_name=`basename $SHELL`
