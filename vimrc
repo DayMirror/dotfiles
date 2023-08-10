@@ -41,13 +41,13 @@
 		let g:airline#extensions#tabline#enabled = 1 " display all buffers if one tab is open
 
 	" Syntastic plugin settings
-		set statusline+=%#warningmsg#
-		set statusline+=%{SyntasticStatuslineFlag()}
-		set statusline+=%*
-		let g:syntastic_always_populate_loc_list = 1
-		let g:syntastic_auto_loc_list = 1
-		let g:syntastic_check_on_open = 1
-		let g:syntastic_check_on_wq = 0
+		" set statusline+=%#warningmsg#
+		" set statusline+=%{SyntasticStatuslineFlag()}
+		" set statusline+=%*
+		" let g:syntastic_always_populate_loc_list = 1
+		" let g:syntastic_auto_loc_list = 1
+		" let g:syntastic_check_on_open = 1
+		" let g:syntastic_check_on_wq = 0
 
 	" Typescript-Vim plugin settings
 		let g:typescript_compiler_binary = 'tsc'
@@ -93,8 +93,9 @@
 		Plug 'justinmk/vim-syntax-extra' " some additional syntax highlighting
 		Plug 'jceb/emmet.snippets' " emmet snippets for ultisnips
 		Plug 'mattn/emmet-vim' " independent from ultisnips emmmet functionality
-		Plug 'vim-syntastic/syntastic' " powerful syntax checker
-		Plug 'rust-lang/rust.vim' " rust syntax checker for syntastic
+		" Plug 'vim-syntastic/syntastic' " powerful syntax checker
+		" Plug 'rust-lang/rust.vim' " rust syntax checker for syntastic
+		Plug 'dense-analysis/ale' " async lint enginge (syntax checker), replacement for syntastic
 		Plug 'quramy/tsuquyomi' " autocompletion and navigation for typescript
 		"Plug 'Quramy/vim-js-pretty-template' " js template string highlighting
 		Plug 'sheerun/vim-polyglot' "	collection of language syntax highlighting plugins
@@ -179,7 +180,7 @@ autocmd VimEnter *
 		nnoremap <leader>PC :PlugClean<cr>
 
 	" Syntastic key bindings
-		nnoremap <leader>ST :SyntasticToggleMode<cr>
+		" nnoremap <leader>ST :SyntasticToggleMode<cr>
 	
 	" Toggle line comments using vim-commentary binding ('_' actually stands for '/' - vim feature)
 		nmap <c-_> gcc
