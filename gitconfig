@@ -1,6 +1,5 @@
-[user]
-	email = dimaev@gsngames.com
-	name = Damir Imaev
+[include]
+	path = ~/.gitconfig.local
 
 [core]
 	editor = vim

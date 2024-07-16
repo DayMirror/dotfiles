@@ -1,8 +1,3 @@
 alias screendocker="screen $DOCKER_VM"
-alias setjava12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
-alias setjava11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
-alias setjava10="export JAVA_HOME=`/usr/libexec/java_home -v 10`; java -version"
-alias setjava9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
-alias setjava8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 alias setphp72="export PATH=/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.2/sbin:$PATH; php -v"
 alias restartapache="brew services restart httpd && brew services list | grep httpd"
