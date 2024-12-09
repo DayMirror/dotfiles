@@ -70,3 +70,93 @@ kpodshell()
 	fi
 	kubectl exec --stdin --tty "$pod" -- /bin/sh
 }
+
+setgitoriginhost() {
+	local new_hostname="$1"
+	# Check if a new hostname was provided
+	if [[ -z "$new_hostname" ]]; then
+		echo "Usage: change_git_hostname <new_hostname>"
+		return 1
+	fi
+
+	# Get the current origin URL
+	local current_url
+	current_url=$(git remote get-url origin 2>/dev/null)
+
+	if [[ $? -ne 0 || -z "$current_url" ]]; then
+		echo "Error: Unable to retrieve current origin URL. Are you in a Git repository?"
+		return 1
+	fi
+
+	# Parse the URL and replace the hostname
+	local new_url
+	if [[ "$current_url" =~ ^git@([^:]+): ]]; then
+		# SSH URL: git@hostname:path
+		new_url=$(echo "$current_url" | sed -E "s|^git@[^:]+:|git@$new_hostname:|")
+	elif [[ "$current_url" =~ ^https?://([^/]+)/ ]]; then
+		# HTTPS URL: https://hostname/path
+		new_url=$(echo "$current_url" | sed -E "s|^(https?://)[^/]+/|\1$new_hostname/|")
+	else
+		echo "Error: Unsupported URL format: $current_url"
+		return 1
+	fi
+
+	# Update the origin URL
+	git remote set-url origin "$new_url"
+	if [[ $? -eq 0 ]]; then
+		echo "Successfully changed origin hostname to: $new_hostname"
+		echo "New origin URL: $new_url"
+	else
+		echo "Error: Failed to update origin URL."
+		return 1
+	fi
+}
+
+setgiturlscheme() {
+	local format="$1"
+	if [[ -z "$format" || ( "$format" != "git" && "$format" != "https" ) ]]; then
+		echo "Usage: change_git_url_format <git|https>"
+		return 1
+	fi
+
+	# Get the current origin URL
+	local current_url
+	current_url=$(git remote get-url origin 2>/dev/null)
+	if [[ $? -ne 0 || -z "$current_url" ]]; then
+		echo "Error: Unable to retrieve current origin URL. Are you in a Git repository?"
+		return 1
+	fi
+	echo "current_url is $current_url"
+	
+	local new_url
+	if [[ "$format" == "git" ]]; then
+		# Convert to SSH format if the current URL is HTTPS
+		if [[ "$current_url" =~ ^https?://([^/]+)/(.+)$ ]]; then
+			local hostname="${match[1]}"
+			local repo_path="${match[2]}"
+			new_url="git@$hostname:$repo_path"
+			else
+				echo "The origin URL is already in git@ format or unsupported: $current_url"
+				return 0
+			fi
+		elif [[ "$format" == "https" ]]; then
+			# Convert to HTTPS format if the current URL is SSH
+			if [[ "$current_url" =~ ^git@([^:]+):(.+)$ ]]; then
+				local hostname="${match[1]}"
+				local repo_path="${match[2]}"
+				new_url="https://$hostname/$repo_path"
+			else
+				echo "The origin URL is already in HTTPS format or unsupported: $current_url"
+				return 0
+			fi
+		fi
+	# Update the origin URL
+	git remote set-url origin "$new_url"
+	if [[ $? -eq 0 ]]; then
+		echo "Successfully changed origin URL to $format format."
+		echo "New origin URL: $new_url"
+	else
+		echo "Error: Failed to update origin URL."
+		return 1
+	fi
+}

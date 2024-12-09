@@ -1059,9 +1059,12 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = "code "
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	excludesfile = /Users/dimaev/.gitignore_global
+	excludesfile = /Users/damirathlo/.gitignore_global
 [commit]
 	template = /Users/dimaev/.stCommitMsg
+[user]
+	name = Damir
+	email = damir.imaev.dev@gmail.com
