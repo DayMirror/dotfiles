@@ -5,3 +5,7 @@ export ZSHEBANG="#!/usr/bin/env zsh"
 export SHEBANG="#!/usr/bin/env bash"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH="$HOME/.rd/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"

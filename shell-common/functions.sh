@@ -160,3 +160,31 @@ setgiturlscheme() {
 		return 1
 	fi
 }
+
+dockershell() {
+    # Check if an argument was provided
+    if [ -z "$1" ]; then
+        echo "Error: Please provide an image name pattern as argument"
+        return 1
+    fi
+
+    # Find container ID by filtering docker ps output for the image pattern
+    container_id=$(docker ps --format '{{.ID}}\t{{.Image}}' | grep -i "$1" | awk '{print $1}')
+
+    # Check if container was found
+    if [ -z "$container_id" ]; then
+        echo "Error: No running container found with image matching pattern: $1"
+        return 1
+    fi
+
+    # If multiple containers found, show warning and use first one
+    container_count=$(echo "$container_id" | wc -l)
+    if [ "$container_count" -gt 1 ]; then
+        echo "Warning: Multiple containers found. Using the first one."
+        container_id=$(echo "$container_id" | head -n1)
+    fi
+
+    # Execute interactive shell in the container
+    echo "Connecting to container: $container_id"
+    docker exec -it "$container_id" /bin/sh -c "[ -e /bin/bash ] && /bin/bash || /bin/sh"
+}
