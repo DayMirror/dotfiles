@@ -31,3 +31,4 @@ alias showawsprofile='eval echo \$AWS_PROFILE'
 alias tf="terraform"
 alias vion="set -o vi"
 alias vioff="set +o vi"
+alias dbx="devbox"
