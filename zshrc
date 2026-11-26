@@ -8,11 +8,10 @@ fi
 #!/bin/sh
 export SHELL=`which zsh`
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZPLUG_HOME=$HOME/.zplug
-# export ZPLUG_HOME=/usr/local/opt/zplug
-# if [ ! -d $ZPLUG_HOME ]; then
-# 	ZPLUG_HOME=$HOME/.zplug
-# fi
+export ZPLUG_HOME="$(brew --prefix zplug)" 
+if [ ! -d $ZPLUG_HOME ]; then
+	ZPLUG_HOME=$HOME/.zplug
+fi
 
 source $ZPLUG_HOME/init.zsh
 
@@ -88,6 +87,9 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+if [ -f ${HOME}/.zplug/init.zsh ]; then
+    source ${HOME}/.zplug/init.zsh
+fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
